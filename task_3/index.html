@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>task_3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="/task_3/css/style.css">
+</head>
+<body>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4 h-100">
+            <form class="form-shadow panel panel-primary v-center" action="/" method="post">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Авторизация</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="login">Логин</label>
+                        <input type="email" name="login" required class="form-control" id="login" placeholder="Логин">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" name="password" required class="form-control" id="password"
+                               placeholder="Пароль">
+                    </div>
+                    <div class="checkbox custom-checkbox">
+                        <input id="someone_pc" name="someone_pc" value="1" type="checkbox" class="custom-checkbox__input">
+                        <label for="someone_pc" class="custom-checkbox__label">Чужой ПК</label>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-primary">Войти</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
