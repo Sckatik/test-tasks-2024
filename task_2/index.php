@@ -9,6 +9,7 @@ if (!isset($_GET['path']))
     redirect(SELF_URL . '?path=');
 
 $p = $_GET['path'] ?? '';
+
 define('PATH', $p);
 
 $path = ROOT_PATH;
@@ -16,11 +17,11 @@ $path = ROOT_PATH;
 if (PATH != '')
     $path .= '/' . PATH;
 
-if (!is_dir($path))
+//добавлена защита от перехода на уровень выше
+if (!is_dir($path) || strpos($p, ".") !== false || substr($p, -1)=='/')
     redirect(SELF_URL . '?path=');
 
 $parent = get_parent_path(PATH);
-
 $objects = is_readable($path) ? scandir($path) : array();
 $folders = array();
 $files = array();
